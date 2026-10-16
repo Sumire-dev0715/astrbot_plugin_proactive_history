@@ -1,0 +1,27 @@
+{
+  "enable_capture": {
+    "type": "bool",
+    "description": "补记主动消息：把 send_message_to_user 发出的内容记下来，下一轮补入对话记录",
+    "default": true
+  },
+  "enable_scaffold_cleanup": {
+    "type": "bool",
+    "description": "清理合成脚手架：把 cron/后台任务写进历史的 “Output your last task result below.” 与 “[CronJob] …” 消息移除",
+    "default": true
+  },
+  "record_media_placeholder": {
+    "type": "bool",
+    "description": "媒体消息用占位符记录（[图片] / [语音] / [视频] / [文件] / [@用户]）",
+    "default": true
+  },
+  "record_scope": {
+    "type": "string",
+    "description": "补记作用域：conversation = 只补进主动消息发出时所在的那个对话（默认，严格）；session = 不管你在哪个对话里回复都补进当前对话",
+    "default": "conversation"
+  },
+  "max_pending_per_session": {
+    "type": "int",
+    "description": "每个会话最多保留多少条待补记（超出丢弃最早的）",
+    "default": 20
+  }
+}

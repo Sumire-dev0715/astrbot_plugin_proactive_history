@@ -1,0 +1,9 @@
+name: astrbot_plugin_proactive_history
+display_name: 主动消息补记
+desc: 把机器人主动发出的消息（未来任务/后台任务经 send_message_to_user 发送的内容）补记进对话记录，并清理 cron/后台任务遗留的合成脚手架消息。
+short_desc: 让机器人主动发的消息也能进对话记录。
+help: 装上即用，无需配置。机器人通过 send_message_to_user 主动发出的内容会被记下，在下一轮对话时补进会话历史；同时清理 cron/后台任务写进历史的 “Output your last task result below.” 与 “[CronJob] …” 两条合成消息。
+version: v1.1.0
+author: zcode
+repo: ""
+astrbot_version: ">=4.9.2"
